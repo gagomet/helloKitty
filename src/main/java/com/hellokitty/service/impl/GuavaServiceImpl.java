@@ -5,6 +5,7 @@ import com.google.common.collect.Ordering;
 import com.hellokitty.service.GuavaService;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -20,10 +21,13 @@ public class GuavaServiceImpl implements GuavaService<Integer> {
     }
 
     @Override
-    public String manipulateWithList(List<Integer> list) {
+    public String manipulateWithListOrder(List<Integer> list) {
         Ordering ordering = Ordering.natural();
         StringBuilder builder = new StringBuilder();
-        builder.append("entry list").append(list.toString());
+        builder.append("Entry list ").append(list.toString());
+        builder.append("\n");
+        Collections.sort(list, ordering);
+        builder.append("Sorted asc list ").append(list.toString());
         return builder.toString();
     }
 

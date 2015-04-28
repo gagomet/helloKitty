@@ -11,7 +11,8 @@
 
   <h1>result is ${result}</h1>
 
-  <form method="post" action="/listResult">
+  <form method="post" action="/listResults">
+    <input name="number" type="text" size="5"/>
     <input type="submit" value="Show me list ordering">
   </form>
 

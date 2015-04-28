@@ -10,5 +10,5 @@ import java.util.List;
 @Service
 public interface GuavaService<T> {
     public int oddNumber(int number);
-    public String manipulateWithList(List<T> list);
+    public String manipulateWithListOrder(List<T> list);
 }

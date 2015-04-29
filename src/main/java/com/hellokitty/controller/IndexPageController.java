@@ -15,7 +15,7 @@ public class IndexPageController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView logged() throws Exception {
         ModelAndView model = new ModelAndView();
-        model.addObject("message", "YoYoYo!!");
+//        model.addObject("message", "YoYoYo!!");
         model.setViewName("index");
         return model;
     }

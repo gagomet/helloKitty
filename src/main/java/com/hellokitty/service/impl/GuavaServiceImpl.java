@@ -28,8 +28,15 @@ public class GuavaServiceImpl implements GuavaService<Integer> {
         builder.append("\n");
         Collections.sort(list, ordering);
         builder.append("Sorted asc list ").append(list.toString());
+        builder.append("\n");
+        Collections.sort(list, ordering.reverse());
+        builder.append("Sorted desc list ").append(list.toString());
+        builder.append("\n");
+        builder.append("Max element in array is: ").append(ordering.max(list)).append("  ")
+                .append("Min element in array is: ").append(ordering.min(list));
         return builder.toString();
     }
+
 
 
 }

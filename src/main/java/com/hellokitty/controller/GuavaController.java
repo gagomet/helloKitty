@@ -39,7 +39,7 @@ public class GuavaController {
     private List<Integer> getIntegerListWithCustomEntries(int entriesNumber){
         List<Integer> result = new ArrayList<>();
         Random randomizer = new Random();
-        for(int i = 0; i < entriesNumber; i++){
+        for(int i = 1; i < entriesNumber; i++){
             result.add(randomizer.nextInt(100));
         }
         return result;
